@@ -1,0 +1,33 @@
+# Render.com Blueprint: one Node web service that builds the app and serves it
+# (static bundle + /api/* provider proxies) with `vite preview`.
+# Keys are set in the Render dashboard; CESIUM_ION_TOKEN and GOOGLE_MAPS_API_KEY
+# are baked in at build time, so redeploy after changing them.
+services:
+  - type: web
+    name: gods-eye
+    runtime: node
+    plan: free
+    buildCommand: npm ci && npm run build
+    startCommand: npx vite preview --host 0.0.0.0 --port $PORT --strictPort
+    healthCheckPath: /
+    envVars:
+      - key: NODE_VERSION
+        value: "24"
+      - key: HOST
+        value: 0.0.0.0
+      - key: PUPPETEER_SKIP_DOWNLOAD
+        value: "true"
+      - key: OPENSKY_AUTH_MODE
+        value: anon
+      # Public URL: cap per-IP spend on the paid-key proxies.
+      - key: GEV_RATELIMIT_OPENAI_PER_MIN
+        value: "10"
+      - key: GEV_RATELIMIT_GOOGLE_PER_MIN
+        value: "30"
+      # Optional keys: fill in the dashboard, or leave empty to run keyless.
+      - key: CESIUM_ION_TOKEN
+        sync: false
+      - key: GOOGLE_MAPS_API_KEY
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
