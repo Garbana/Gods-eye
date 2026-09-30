@@ -33,8 +33,9 @@ prisijungę prie savo GitHub paskyros.
 Svarbu:
 - Nemokamai gaunate ~60 val. per mėnesį (2 branduolių mašina). Codespace
   pats išsijungia po 30 min. neveiklumo, tad valandos neišeikvojamos veltui.
-- Raktus čia galite įvesti tiesiog programos **POWER UP** mygtuku arba per
-  GitHub → Settings → Codespaces → **Secrets** (pvz. `CESIUM_ION_TOKEN`).
+- **POWER UP** mygtukas čia irgi neveiks. Raktus įveskite per GitHub →
+  Settings → Codespaces → **Secrets** (pvz. `CESIUM_ION_TOKEN`, leiskite jį
+  repozitorijai `Garbana/Gods-eye`), tada codespace perkraukite.
 - Porto nekeiskite į **Public**: privatų adresą atidaro tik jūsų GitHub paskyra.
 
 ## Ką verta žinoti (Render)
