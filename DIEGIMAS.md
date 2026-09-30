@@ -16,7 +16,28 @@ paleidžia programą. Į kompiuterį nieko siųstis nereikia.
 6. Kai būsena taps **Live**, viršuje matysite adresą, pvz.
    `https://gods-eye-xxxx.onrender.com`. Jį atsidarykite bet kurioje naršyklėje, ir telefone.
 
-## Ką verta žinoti
+## Alternatyva: per GitHub Codespaces (jei `onrender.com` užblokuotas)
+
+Codespaces paleidžia visą programą GitHub'o debesyje. Adresas būna
+`https://<pavadinimas>-4173.app.github.dev`, o jį atidaryti gali tik jūs,
+prisijungę prie savo GitHub paskyros.
+
+1. Atsidarykite <https://github.com/Garbana/Gods-eye>, pasirinkite šaką su šiuo failu.
+2. **Code → Codespaces → Create codespace on …**
+3. Pirmą kartą palaukite ~3–5 min., kol viskas įsidiegs ir terminale pasirodys
+   `Local: http://localhost:4173/`.
+4. Naršyklė pati atidarys programą. Jei neatidaro: apačioje skirtukas **Ports** →
+   eilutė **4173** → gaublio ikona.
+5. Kitą kartą: <https://github.com/codespaces> → jūsų codespace → **Open**.
+
+Svarbu:
+- Nemokamai gaunate ~60 val. per mėnesį (2 branduolių mašina). Codespace
+  pats išsijungia po 30 min. neveiklumo, tad valandos neišeikvojamos veltui.
+- Raktus čia galite įvesti tiesiog programos **POWER UP** mygtuku arba per
+  GitHub → Settings → Codespaces → **Secrets** (pvz. `CESIUM_ION_TOKEN`).
+- Porto nekeiskite į **Public**: privatų adresą atidaro tik jūsų GitHub paskyra.
+
+## Ką verta žinoti (Render)
 
 - **Nemokamas planas „užmiega“** po ~15 min. be lankytojų. Kitą kartą atidarius
   svetainę, ji kraunasi ~1 min. Tai normalu.

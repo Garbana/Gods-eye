@@ -1,0 +1,23 @@
+// GitHub Codespaces: runs the full app (UI + /api proxies) in the cloud and
+// serves it on a private *.app.github.dev URL that only your GitHub login opens.
+{
+  "name": "God's Eye View",
+  "image": "mcr.microsoft.com/devcontainers/base:bookworm",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": { "version": "24" }
+  },
+  "containerEnv": {
+    // Accept the forwarded *.app.github.dev Host header.
+    "HOST": "0.0.0.0",
+    "PORT": "4173",
+    "PUPPETEER_SKIP_DOWNLOAD": "true",
+    "OPENSKY_AUTH_MODE": "anon"
+  },
+  "postCreateCommand": "npm ci",
+  "postAttachCommand": "npm run dev",
+  "forwardPorts": [4173],
+  "portsAttributes": {
+    "4173": { "label": "God's Eye View", "onAutoForward": "openBrowser" }
+  },
+  "hostRequirements": { "cpus": 2 }
+}
